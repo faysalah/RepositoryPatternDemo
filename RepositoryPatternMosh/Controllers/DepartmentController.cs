@@ -17,7 +17,6 @@ namespace RepositoryPatternMosh.Controllers
         public IHttpActionResult GetAll()
         {
             var unitOfWork = new UnitOfWork(new AppDbContext());
-            
             return Ok(unitOfWork.Departments.GetAll());
         }
 
